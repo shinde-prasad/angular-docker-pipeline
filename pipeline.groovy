@@ -105,7 +105,7 @@ pipeline {
         //         // return here instead of throwing error to keep the build "green"
         //         return
         //     }
-        //     // normal error handling
+        //     // normal error handling try catch block
         //     throw e
         // }
     }
