@@ -1,10 +1,10 @@
 pipeline {
-    //agent {label 'slave_node1'}
 	agent any
     environment {
 		// environment variables and credential retrieval can be interspersed
+	    	//agent {label 'slave_node1'}
 		//def dirpath = "D:\\workspace\\Angularapp"
-	    	def dirpath = "D:\\workspace\\devops\\Angularapp\\hello-world"
+	    	def dirpath = "D:\\workspace\\devops\\Angularapp"
 		def tomcatPath = "C:\\apache-tomcat-9.0.45\\"
 		def projectName = "hello-world"
 		def autoCancelled = false
