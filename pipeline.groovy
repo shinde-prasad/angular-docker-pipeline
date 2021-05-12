@@ -52,8 +52,9 @@ pipeline {
     				dir(dirpath+'\\'+projectName) {
     				    withSonarQubeEnv('SonarQube') {
     				        // bat('sonar-scanner -v')
-                            // bat("sonar-scanner")
-                            bat "${sonarScannerHome}/bin/sonar-scanner.bat -X"
+					// bat("sonar-scanner")
+                            		//bat "${sonarScannerHome}/bin/sonar-scanner.bat -X"
+				    	bat "${sonarScannerHome}/bin/sonar-scanner.bat -Dproject.settings=./sonar-project.properties"
                         }
     				}
     			}
