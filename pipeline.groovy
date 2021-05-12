@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {label 'slave_node1'}
     environment {
 		// environment variables and credential retrieval can be interspersed
 		def dirpath = "D:\\workspace\\Angularapp"
