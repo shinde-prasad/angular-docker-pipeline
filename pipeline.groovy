@@ -1,5 +1,6 @@
 pipeline {
-	agent any
+	agent {label 'slave_node1'}
+	//agent any
     environment {
 		// environment variables and credential retrieval can be interspersed
 	    	//agent {label 'slave_node1'}
