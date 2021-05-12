@@ -1,5 +1,6 @@
 pipeline {
-    agent {label 'slave_node1'}
+    //agent {label 'slave_node1'}
+	agent any
     environment {
 		// environment variables and credential retrieval can be interspersed
 		def dirpath = "D:\\workspace\\Angularapp"
@@ -51,7 +52,7 @@ pipeline {
     				echo "TEST Phase Started :: Via sonarqube scripts"
     				dir(dirpath+'\\'+projectName) {
     				    withSonarQubeEnv('SonarQube') {
-    				        bat('sonar-scanner -v')
+    				        //bat('sonar-scanner -v')
 					bat("sonar-scanner -X")
                             		//bat "${sonarScannerHome}/bin/sonar-scanner.bat -X"
 				    	//bat "${sonarScannerHome}/bin/sonar-scanner.bat -Dproject.settings=./sonar-project.properties"
