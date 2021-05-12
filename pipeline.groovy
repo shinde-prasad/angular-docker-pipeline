@@ -3,7 +3,8 @@ pipeline {
 	agent any
     environment {
 		// environment variables and credential retrieval can be interspersed
-		def dirpath = "D:\\workspace\\Angularapp"
+		//def dirpath = "D:\\workspace\\Angularapp"
+	    	def dirpath = "D:\\workspace\\devops\\Angularapp\\hello-world"
 		def tomcatPath = "C:\\apache-tomcat-9.0.45\\"
 		def projectName = "hello-world"
 		def autoCancelled = false
@@ -13,11 +14,11 @@ pipeline {
         // try {
             stage('Intialisation') {
                 steps {
-                    echo "=================================Check path variables==============================="
-    				echo "PATH = ${PATH}"
-    				echo "tomcatPath  = ${tomcatPath}"
-    				echo "dirpath = ${dirpath}"
-                    bat('docker -v')
+                    	echo "=================================Check path variables==============================="
+			echo "PATH = ${PATH}"
+			echo "tomcatPath  = ${tomcatPath}"
+			echo "dirpath = ${dirpath}"
+			bat('docker -v')
 
                     //check if docker service daemon running or not
                     // if ('docker -v') {
